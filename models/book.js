@@ -47,8 +47,13 @@ const addSchema = Joi.object({
   date: Joi.string().pattern(dataRegexp).required(),
 });
 
+const favoriteSchema = Joi.object({
+  favorite: Joi.boolean().required()
+})
+
 const schemas = {
   addSchema,
+  favoriteSchema,
 }
 
 module.exports = { 
